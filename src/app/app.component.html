@@ -1,9 +1,28 @@
-<h3>Press Button to display a list with product names.</h3>
-<button (click)="fetchProducts()">Press me</button>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<h3 style="text-align: center;">Press Button to display a list with product names.</h3>
+<button (click)="fetchProducts()" style="display: block; margin: 0 auto; font-size: 20px;">Press me</button>
 
 <hr>
 
-<ul style="font-size: 12px;">
-  <li *ngFor="let prod of products$">{{ prod.name }}
-</ul>
+<table class="table table-striped"  style="max-width: 700px; margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Брэнд</th>
+                    <th>Цена</th>
+                    <th>Оценка</th>
+                    <th>Ссылка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products$">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.brand }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.stars }}</td>
+                    <td><a href="{{ item.link }}" alt="product on amazon">on amazon.co.uk</a></td>
+                </tr>
+            </tbody>
+        </table>
 
