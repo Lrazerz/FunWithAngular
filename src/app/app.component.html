@@ -1,0 +1,9 @@
+<h3>Press Button to display a list with product names.</h3>
+<button (click)="fetchProducts()">Press me</button>
+
+<hr>
+
+<ul style="font-size: 12px;">
+  <li *ngFor="let prod of products$">{{ prod.name }}
+</ul>
+
