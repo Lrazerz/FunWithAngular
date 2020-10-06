@@ -13,4 +13,5 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
   window['ngRef'] = ref;
 
   // Otherwise, log the boot error
+  //Bondarenko pidar
 }).catch(err => console.error(err));
